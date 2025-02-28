@@ -1,0 +1,30 @@
+@use "../../constants/colors.module.scss" as *;
+@use "../../constants/breakpoints.module.scss" as screens;
+
+.container {
+  &_description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: 15px;
+
+    font-size: 22px;
+
+    @media (max-width: screens.$tablet) {
+      font-size: 12px;
+    }
+  }
+
+  &_meal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: screens.$tablet) {
+      flex-direction: column;
+      margin-top: 5px;
+    }
+  }
+}
