@@ -70,9 +70,15 @@ export const RecipeCard = (meal: mealType) => {
     >
       <div className={styles.container_delete}>
         {!cartItemsState.find((item) => item.idMeal === meal.idMeal) ? (
-          <FaCartPlus size={15} color="white" onClick={addToFavouriteHandler} />
+          <FaCartPlus
+            cursor="pointer"
+            size={15}
+            color="white"
+            onClick={addToFavouriteHandler}
+          />
         ) : (
           <MdOutlineRemoveShoppingCart
+            cursor="pointer"
             size={15}
             color="white"
             onClick={deleteFromFavouritesHandler}
